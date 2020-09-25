@@ -1,0 +1,30 @@
+<div>
+    Filters
+    <label>Launch Year</label>
+    <div class="row">
+        <div *ngFor="let y of year" class="col"  (click)="filterList(y)">
+          {{y}}
+        </div>
+      </div>
+
+      <label>Successful Launch</label>
+      <div class="row">
+        <div class="col">
+          True
+        </div>
+        <div class="col">
+          False
+        </div>
+      </div>
+
+      <label>Successful landing</label>
+      <div class="row">
+        <div class="col">
+          True
+        </div>
+        <div class="col">
+          False
+        </div>
+      </div>
+</div>
+
