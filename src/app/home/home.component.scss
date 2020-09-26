@@ -1,0 +1,25 @@
+main-container {
+    background-color: lightgray;
+    padding-bottom: 40px;;
+}
+
+.row-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: 767px) {
+        justify-content: left;
+    }
+}
+
+.dev-name {
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+
+    strong {
+        color: darkorange;
+    }
+}

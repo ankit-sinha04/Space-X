@@ -9,6 +9,10 @@ export class SideNavComponent implements OnInit {
 
   @Input() year:any;
   @Output() lYear = new EventEmitter();
+  @Output() sList = new EventEmitter();
+
+  @Output() lList = new EventEmitter();
+
 
 
   constructor() { }
@@ -18,6 +22,14 @@ export class SideNavComponent implements OnInit {
 
   filterList(y) {
     this.lYear.emit(y);
+  }
+
+  filterLUYear(e) {
+    this.sList.emit(e);
+  }
+
+  filterLAYear(e) {
+    this.lList.emit(e);
   }
 
 }

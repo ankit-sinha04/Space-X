@@ -1,10 +1,11 @@
 
-
-    <p>SpaceX launch programs</p>
-    <div class="row">
+<div class="main-container">
+    <div class="row-item">
         <div *ngFor="let listItem of spaceData2">
             <!-- {{listItem | json}} -->
             <app-card [item]="listItem"></app-card>
         </div>
     </div>
+    <dev class="dev-name">Developed by:<strong>Ankit Sinha</strong></dev>
+</div>
 

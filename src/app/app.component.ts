@@ -17,15 +17,24 @@ export class AppComponent implements OnInit{
     this.SpacedataService.getSpaceXadata().subscribe((results) => { 
       this.spaceData  = results;
       this.years = [...new Set(this.spaceData.map(i => (i.launch_year)))];
-      console.log(this.years);
     })
-    console.log(this.spaceData);
   }
 
   displayFilterData(event) {
     this.SpacedataService.getyearData(event).subscribe((r) => { 
       this.spaceData = r;
-      console.log(this.spaceData);
+    });
+  }
+
+  sussLaunchData(e) {
+    this.SpacedataService.getLaunchData(e).subscribe((r) => { 
+      this.spaceData = r;
+    });
+  }
+
+  sussLandData(e) {
+    this.SpacedataService.getLandingData(e).subscribe((r) => { 
+      this.spaceData = r;
     });
   }
 }

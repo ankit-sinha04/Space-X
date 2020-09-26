@@ -1,0 +1,146 @@
+.side-bar {
+    // width: 200px;
+    background-color: white;
+    border-radius: 3px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 62%;
+
+    @media (min-width: 767px) {
+      padding: 5px;
+      width: 100%;
+    }
+  
+    .heading-container{
+      text-align: center;
+      .sub-heading {
+        font-weight: 600;
+        font-size: 12px;
+        border-bottom: 1px solid black;
+      }
+  
+      .year-list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 5px;
+  
+        .year-wrapper{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-top: 5px;
+          padding: 0 10px;
+  
+          .year-left{
+            margin: 6px;
+            padding: 5px 0;
+            width: 40%;
+
+            @media (min-width: 767px) {
+              margin: 5px 0;
+              width: 50%;
+            }
+  
+            span {
+              background-color: lightgreen;
+              border-radius: 5px;
+              padding: 5px 15px;
+  
+              &:hover{
+                cursor: pointer;
+                background-color: darkgreen;
+              }
+            }
+          }
+          .year-right{
+            margin: 6px;
+            padding: 5px 0;
+            width: 40%;
+
+            @media (min-width: 767px) {
+              margin: 5px 0;
+              width: 50%;
+            }
+  
+            span {
+              background-color: lightgreen;
+              border-radius: 5px;
+              padding: 5px 15px;
+  
+              &:hover{
+                cursor: pointer;
+                background-color: darkgreen;
+              }
+            }
+          }
+        }
+  
+      }
+  
+      .lu-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 5px;
+        padding: 0 10px;
+  
+        .lText{
+          margin: 6px;
+          padding: 5px 0;
+          width: 40%;
+
+          @media (min-width: 767px) {
+            margin: 5px 0;
+            width: 50%;
+          }
+  
+          span {
+            background-color: lightgreen;
+            border-radius: 5px;
+            padding: 5px 15px;
+  
+            &:hover{
+              cursor: pointer;
+              background-color: darkgreen;
+            }
+          }
+        }
+      }
+  
+      .la-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 5px;
+        padding: 0 10px;
+  
+        .lText{
+          margin: 6px;
+          padding: 5px 0;
+          width: 40%;
+
+          @media (min-width: 767px) {
+            margin: 5px 0;
+            width: 50%;
+          }
+  
+          span {
+            background-color: lightgreen;
+            border-radius: 5px;
+            padding: 5px 15px;
+  
+            &:hover{
+              cursor: pointer;
+              background-color: green;
+            }
+          }
+        }
+      }
+  
+    }
+  
+  }

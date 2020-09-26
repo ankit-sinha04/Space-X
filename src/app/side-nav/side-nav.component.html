@@ -1,30 +1,28 @@
-<div>
-    Filters
-    <label>Launch Year</label>
-    <div class="row">
-        <div *ngFor="let y of year" class="col"  (click)="filterList(y)">
-          {{y}}
-        </div>
-      </div>
 
-      <label>Successful Launch</label>
-      <div class="row">
-        <div class="col">
-          True
-        </div>
-        <div class="col">
-          False
-        </div>
-      </div>
+<div class="side-bar">
+  <h3>Filters</h3>
+  <div class="heading-container">
+    <span class="sub-heading">Launch Year</span>
+    <div class="year-list" >
+        <span class="year-wrapper">
+          <span [ngClass]="{'year-left': i % 2 == 0 , 'year-right': i % 2 !== 0 }" *ngFor="let item of year" (click)="filterList(item)"><span> {{ item }} </span></span>
+        </span>
+    </div>
+  </div>
 
-      <label>Successful landing</label>
-      <div class="row">
-        <div class="col">
-          True
-        </div>
-        <div class="col">
-          False
-        </div>
-      </div>
+  <div class="heading-container">
+    <span class="sub-heading">Successful Launch</span>
+    <span class="lu-wrapper">
+      <span class="lText" successList (click)="filterLUYear('true')"><span>True</span></span>
+      <span class="lText"><span (click)="filterLUYear('false')">False</span></span>
+    </span>
+  </div>
+  <div class="heading-container">
+    <span class="sub-heading">Successful Landing</span>
+    <span class="la-wrapper">
+      <span class="lText"><span (click)="filterLAYear('true')">True</span></span>
+      <span class="lText"><span (click)="filterLAYear('false')">False</span></span>
+    </span>
+  </div>
 </div>
 
