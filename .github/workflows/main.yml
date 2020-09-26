@@ -28,7 +28,7 @@ jobs:
   
    # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: ng test --watch=false --browsers=ChromeHeadless
+        run: npm run test
   
          # Runs a single command using the runners shell
       - name: Run a one-line script
