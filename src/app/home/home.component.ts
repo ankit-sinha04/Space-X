@@ -13,8 +13,6 @@ export class HomeComponent implements OnInit {
   constructor(private SpacedataService:SpacedataService) { }
 
   ngOnInit(): void {
-    // this.SpacedataService.getSpaceXadata().subscribe(resuslts => this.spaceData2 = resuslts)
-    // console.log(this.spaceData2)
   }
 
   getSpaceXallData() {
