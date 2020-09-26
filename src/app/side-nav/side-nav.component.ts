@@ -25,6 +25,7 @@ export class SideNavComponent implements OnInit {
   }
 
   filterLUYear(e) {
+    console.log(e);
     this.sList.emit(e);
   }
 
