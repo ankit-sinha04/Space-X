@@ -10,6 +10,8 @@ export class AppComponent implements OnInit{
   title = 'my-spacex';
   years:any = [];
   spaceData: any = [];
+  launchData: boolean = false;
+  landData: boolean = false;
 
   constructor(private SpacedataService: SpacedataService) {}
 
@@ -27,13 +29,14 @@ export class AppComponent implements OnInit{
   }
 
   sussLaunchData(e) {
-    this.SpacedataService.getLaunchData(e).subscribe((r) => { 
+    this.SpacedataService.getLaunchData(e.slaunch, e.cYear).subscribe((r) => { 
       this.spaceData = r;
     });
   }
 
   sussLandData(e) {
-    this.SpacedataService.getLandingData(e).subscribe((r) => { 
+    this.SpacedataService.getLandingData(e.sLand, e.cYear).subscribe((r) => { 
+      console.log(r);
       this.spaceData = r;
     });
   }

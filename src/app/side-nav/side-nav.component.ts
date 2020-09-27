@@ -13,6 +13,9 @@ export class SideNavComponent implements OnInit {
 
   @Output() lList = new EventEmitter();
 
+currentYear: any;
+successlaunch;
+successland;
 
 
   constructor() { }
@@ -21,16 +24,22 @@ export class SideNavComponent implements OnInit {
   }
 
   filterList(y) {
+    this.currentYear =y;
     this.lYear.emit(y);
   }
 
   filterLUYear(e) {
-    console.log(e);
-    this.sList.emit(e);
+    this.successlaunch = e;
+    // this.successland ='';
+    // this.currentYear = '';
+    this.sList.emit({'slaunch':e, 'cYear':this.currentYear, 'sLand':this.successland});
   }
 
   filterLAYear(e) {
-    this.lList.emit(e);
+    this.successland = e;
+    // this.successlaunch ='';
+    // this.currentYear = '';
+    this.lList.emit({'slaunch':e, 'cYear':this.currentYear, 'sLand':this.successland});
   }
 
 }

@@ -17,11 +17,11 @@ export class SpacedataService {
     return this.http.get("https://api.spaceXdata.com/v3/launches?launch_year=" + year);
   }
 
-  getLaunchData(b) {
-    return this.http.get("https://api.spaceXdata.com/v3/launches?limit=100&launch_success=" + b)
+  getLaunchData(b, year) {
+    return this.http.get("https://api.spaceXdata.com/v3/launches?limit=100&launch_success=" + b + "&launch_year=" + year );
   }
 
-  getLandingData(b) {
-    return this.http.get("https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=" + b)
+  getLandingData(b, year) {
+    return this.http.get("https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=" + b + "&launch_year=" + year);
   }
 }

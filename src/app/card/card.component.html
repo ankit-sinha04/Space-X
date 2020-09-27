@@ -21,7 +21,7 @@
       </ul>
       <span><b>Launch Year:</b> {{ item.launch_year }} </span>
       <span><b>Successful Launch:</b> {{ item.launch_success }} </span>
-      <span><b>Successful Landing:</b> {{ item.launch_landing }} </span>
+      <span><b>Successful Landing:</b> {{ (item.rocket)?.first_stage.cores[0].land_success }} </span>
     </div>
   </div>
   

@@ -33,7 +33,7 @@
           margin-top: 5px;
           padding: 0 10px;
   
-          .year-left{
+          .y-left{
             margin: 6px;
             padding: 5px 0;
             width: 40%;
@@ -48,13 +48,17 @@
               border-radius: 5px;
               padding: 5px 15px;
   
-              &:hover, &:active{
+              &:hover{
                 cursor: pointer;
                 background-color: darkgreen;
               }
+
+              &.active {
+                background-color: red;
+              }
             }
           }
-          .year-right{
+          .y-right{
             margin: 6px;
             padding: 5px 0;
             width: 40%;
@@ -69,9 +73,13 @@
               border-radius: 5px;
               padding: 5px 15px;
   
-              &:hover, &:active {
+              &:hover {
                 cursor: pointer;
                 background-color: darkgreen;
+              }
+
+              &.active {
+                background-color: red;
               }
             }
           }
@@ -102,9 +110,13 @@
             border-radius: 5px;
             padding: 5px 15px;
   
-            &:hover, &:active{
+            &:hover{
               cursor: pointer;
               background-color: darkgreen;
+            }
+
+            &.active {
+              background-color: red;
             }
           }
         }
@@ -133,9 +145,13 @@
             border-radius: 5px;
             padding: 5px 15px;
   
-            &:hover, &:active{
+            &:hover{
               cursor: pointer;
               background-color: green;
+            }
+
+            &.active {
+              background-color: red;
             }
           }
         }

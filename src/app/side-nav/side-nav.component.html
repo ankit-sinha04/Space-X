@@ -5,7 +5,7 @@
     <span class="sub-heading">Launch Year</span>
     <div class="year-list" >
         <span class="year-wrapper">
-          <span [ngClass]="{'year-left': i % 2 == 0 , 'year-right': i % 2 !== 0 }" *ngFor="let item of year" (click)="filterList(item)"><span> {{ item }} </span></span>
+          <span [ngClass]="{'y-left': item % 2 == 0 , 'y-right': item % 2 !== 0 }" *ngFor="let item of year; let i = index" (click)="filterList(item)"><span [ngClass]="{'active': item===currentYear}"> {{ item }} </span></span>
         </span>
     </div>
   </div>
@@ -13,15 +13,15 @@
   <div class="heading-container">
     <span class="sub-heading">Successful Launch</span>
     <span class="lu-wrapper">
-      <span class="lText" successList (click)="filterLUYear('true')"><span>True</span></span>
-      <span class="lText"><span (click)="filterLUYear('false')">False</span></span>
+      <span class="lText" (click)="filterLUYear('true')"><span [ngClass]="{'active': 'true'===successlaunch}">True</span></span>
+      <span class="lText" (click)="filterLUYear('false')"><span [ngClass]="{'active': 'false'===successlaunch}">False</span></span>
     </span>
   </div>
   <div class="heading-container">
     <span class="sub-heading">Successful Landing</span>
     <span class="la-wrapper">
-      <span class="lText"><span (click)="filterLAYear('true')">True</span></span>
-      <span class="lText"><span (click)="filterLAYear('false')">False</span></span>
+      <span class="lText" (click)="filterLAYear('true')"><span [ngClass]="{'active': 'true'===successland}">True</span></span>
+      <span class="lText" (click)="filterLAYear('false')"><span [ngClass]="{'active': 'false'===successland}">False</span></span>
     </span>
   </div>
 </div>
