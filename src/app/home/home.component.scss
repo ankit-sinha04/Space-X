@@ -8,9 +8,9 @@ main-container {
     flex-wrap: wrap;
     justify-content: center;
 
-    @media (min-width: 767px) {
-        justify-content: left;
-    }
+    // @media (min-width: 767px) {
+    //     justify-content: left;
+    // }
 }
 
 .dev-name {

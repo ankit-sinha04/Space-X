@@ -23,23 +23,32 @@ successland;
   ngOnInit(): void {
   }
 
-  filterList(y) {
-    this.currentYear =y;
-    this.lYear.emit(y);
+  filterList(y) { 
+    if(this.currentYear === y) {
+      this.currentYear = '';
+    } else {
+      this.currentYear = y;
+    }
+    this.lYear.emit(this.currentYear);
   }
 
   filterLUYear(e) {
-    this.successlaunch = e;
-    // this.successland ='';
-    // this.currentYear = '';
-    this.sList.emit({'slaunch':e, 'cYear':this.currentYear, 'sLand':this.successland});
+    if(this.successlaunch === e) {
+      this.successlaunch = '';
+    } else {
+      this.successlaunch = e;
+    }
+    
+    this.sList.emit({'slaunch':this.successlaunch, 'cYear':this.currentYear, 'sLand':this.successland});
   }
 
   filterLAYear(e) {
-    this.successland = e;
-    // this.successlaunch ='';
-    // this.currentYear = '';
-    this.lList.emit({'slaunch':e, 'cYear':this.currentYear, 'sLand':this.successland});
+    if(this.successland === e) {
+      this.successland = '';
+    } else {
+      this.successland = e;
+    }
+    this.lList.emit({'slaunch': this.successland, 'cYear':this.currentYear, 'sLand':this.successland});
   }
 
 }
